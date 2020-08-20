@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
   if (face.length > max_face_length) {
     face = "OwO";
   }
+  res.set({
+    'Content-Type': 'text/plain',
+    'Content-Length': '123',
+    'Access-Control-Allow-Origin': '*',
+  })
   res.send(face);
 });
 
